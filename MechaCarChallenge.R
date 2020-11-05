@@ -1,0 +1,6 @@
+library(dplyr)
+library(jsonlite)
+install.packages("dplyr")
+MechaTable <-read.csv(file='MechaCar_mpg.csv',check.names=F,stringsAsFactors = F)
+lm(mpg ~ .,MechaTable)
+summary(lm(mpg ~ .,MechaTable))
